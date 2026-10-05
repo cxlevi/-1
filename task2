@@ -1,0 +1,16 @@
+let demoTasks = [
+    {id: 1, title: "Задача 1", completed: true},
+    {id: 4, title: "Задача 4", completed: false},
+    {id: 7, title: "Задача 7", completed: false},
+    {id: 10, title: "Задача 10", completed: true}
+];
+
+function getPendingTasks(tasks){
+    return tasks.filter(task => task.completed === false);
+}
+
+let pending = getPendingTasks(demoTasks);
+console.log("Их id: ", pending.map(t => t.id));
+
+let empty = getPendingTasks([]);
+console.log("Результат: ", empty);
